@@ -13,7 +13,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const ai = new GoogleGenAI({
-  apiKey: process.env.GEMINI_API_KEY
+  apiKey: AIzaSyC1ChRCQXMWCyXMwYtuyTjp_D5RNjk1BcI
 });
 
 const history = [];
