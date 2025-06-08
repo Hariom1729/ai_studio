@@ -10,7 +10,9 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(cors({
-  origin: '*'
+  origin: 'https://haiigpt.netlify.app', // ✅ Only allow Netlify frontend
+  methods: ['POST'], // ✅ Only allow POST
+  credentials: true
 }));
 app.use(bodyParser.json());
 
