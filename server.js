@@ -7,13 +7,13 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(bodyParser.json());
 
 const ai = new GoogleGenAI({
-  apiKey: "AIzaSyC9yCtf_Qmw5K8c8FNR6zC57Iy9UezV8D4"
+  apiKey:process.env.API_KEY
 });
 
 const history = [];
