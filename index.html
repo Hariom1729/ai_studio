@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Studio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="sidebar">
+    <h2>AI Studio</h2>
+    <ul>
+      <li>Chat</li>
+      <li>Stream</li>
+      <li>Generate Media</li>
+      <li>Build</li>
+      <li>History</li>
+      <li>Enable Saving</li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <div class="welcome">Welcome to AI Studio</div>
+
+    <!-- Chat container with output and input grouped -->
+    <div id="chat-container">
+      <div id="chat-output"></div>
+      <div id="input-area" class="prompt-box">
+        <input id="user-input" type="text" placeholder="Type your message..." />
+        <button onclick="sendMessage()">Run</button>
+      </div>
+    </div>
+
+    <!-- <h3>What's new</h3>
+    <div class="features">
+      <div class="card">
+        <strong>Native speech generation</strong><br />
+        Generate high quality text to speech with Gemini
+      </div>
+      <div class="card">
+        <strong>Live audio-to-audio dialog</strong><br />
+        Try Gemini’s natural, real-time dialog with audio and video inputs
+      </div>
+      <div class="card">
+        <strong>Native image generation</strong><br />
+        Interleaved text-and-image generation with Gemini 2.0 Flash
+      </div>
+      <div class="card">
+        <strong>Explore and co-develop apps</strong><br />
+        See Gemini in action with interactive, open source examples
+      </div>
+    </div> -->
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

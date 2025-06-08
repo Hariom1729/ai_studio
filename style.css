@@ -1,0 +1,308 @@
+/* General body and background */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  height: 100vh;
+  display: flex;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 220px;
+  background: linear-gradient(to bottom, #1f1f1f, #2c2c2c);
+  padding: 20px;
+  box-sizing: border-box;
+  border-right: 1px solid #333;
+}
+
+.sidebar h2 {
+  color: #ff8a65;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 10px 12px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  color: #ccc;
+  font-weight: 500;
+}
+
+.sidebar ul li:hover {
+  color: #fff;
+  background: linear-gradient(90deg, #ff6e7f, #bfe9ff);
+  transform: translateX(5px);
+}
+
+/* Main content styles */
+/* Main content styles */
+.main {
+  flex-grow: 1;
+  padding: 20px;
+  background: linear-gradient(135deg, #181818, #20232a, #1f1f1f);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: #e0e0e0;
+}
+
+/* Welcome text with accent color */
+.welcome {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #80d8ff;
+  font-weight: bold;
+}
+
+/* Section headers */
+h3 {
+  margin-top: 20px;
+  color: #ffcc80;
+}
+
+/* Feature cards */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.card {
+  background: linear-gradient(145deg, #2c2c2c, #1a1a1a);
+  color: #e0e0e0;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  flex: 1 1 200px;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.card:hover {
+  background: linear-gradient(145deg, #3a3a3a, #222);
+  transform: translateY(-3px);
+}
+
+
+/* Chat container */
+#chat-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background-color: #222;
+  overflow: hidden;
+}
+
+/* Chat output area with vibrant shadow */
+#chat-output {
+  flex-grow: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background-color: #1e1e2f;
+  border-top: 1px solid #333;
+  border-radius: 8px 8px 0 0;
+  box-shadow: inset 0 0 10px #0f0f1f;
+}
+
+/* Message bubbles */
+.message {
+  margin-bottom: 15px;
+  padding: 12px 16px;
+  border-radius: 18px;
+  max-width: 80%;
+  word-wrap: break-word;
+  font-size: 1rem;
+  line-height: 1.5;
+  position: relative;
+  white-space: pre-wrap;
+}
+
+/* User message (You) */
+.message.you {
+  align-self: flex-end;
+  background: linear-gradient(145deg, #4b7bec, #3a55d2);
+  color: #fff;
+  border-radius: 18px 18px 0 18px;
+  box-shadow: 0 4px 8px rgba(75, 123, 236, 0.4);
+}
+
+/* Gemini (AI) message */
+.message.gemini {
+  align-self: flex-start;
+  background: linear-gradient(145deg, #2a2a72, #009ffd); /* vibrant blue gradient */
+  color: #ffffff; /* bright white text for visibility */
+  padding: 12px 16px;
+  border-radius: 16px 16px 16px 0;
+  max-width: 90%;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+
+/* Error message */
+.message.error {
+  background-color: #b00020;
+  color: #fff;
+  border-radius: 18px;
+  padding: 12px 16px;
+}
+
+/* Code block inside chat */
+.message pre {
+  background: #2d2d2d;
+  color: #f8f8f2;
+  padding: 12px 10px;
+  border-radius: 10px;
+  overflow-x: auto;
+  margin-top: 8px;
+  font-family: 'Courier New', monospace;
+  position: relative;
+}
+
+/* Copy button inside code block */
+.copy-btn {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  background-color: #444;
+  color: #eee;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 0.8em;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.copy-btn:hover {
+  opacity: 1;
+}
+
+
+/* Individual message styles */
+.message {
+  margin-bottom: 15px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.message.you {
+  align-self: flex-end;
+  background-color: #4b7bec;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 15px 15px 0 15px;
+}
+
+.message.gemini {
+  align-self: flex-start;
+  background-color: #333;
+  color: #ddd;
+  padding: 10px 15px;
+  border-radius: 15px 15px 15px 0;
+}
+
+/* Input area */
+/* Prompt box container */
+.prompt-box {
+  display: flex;
+  border-top: 1px solid #333;
+  padding: 12px;
+  background-color: #1a1a2e;
+  box-shadow: inset 0 0 10px #0f0f1f;
+  border-radius: 0 0 12px 12px;
+}
+
+/* User input field */
+#user-input {
+  flex-grow: 1;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  background: linear-gradient(135deg, #2d2d44, #1a1a2e);
+  color: #e0e0e0;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+#user-input::placeholder {
+  color: #aaa;
+}
+
+/* Submit Button */
+button {
+  padding: 0 24px;
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 0 10px 10px 0;
+  transition: background 0.3s ease, transform 0.1s ease;
+  font-size: 1rem;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #ff8c00, #ff0066);
+  transform: scale(1.05);
+}
+
+/* Code block and copy button styling */
+/* Code block container */
+.message pre {
+  position: relative;
+  background: linear-gradient(135deg, #1e1e3f, #2a2a5e);
+  color: #e0f7fa;
+  padding: 16px;
+  border-radius: 12px;
+  overflow-x: auto;
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  border: 1px solid #444;
+  margin-bottom: 1rem;
+}
+
+/* Copy button inside code block */
+pre .copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85em;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: background 0.3s ease, transform 0.2s ease;
+  opacity: 0.85;
+}
+
+pre .copy-btn:hover {
+  background: linear-gradient(135deg, #00d2ff, #3a47d5);
+  transform: scale(1.05);
+  opacity: 1;
+}
+
