@@ -344,3 +344,15 @@ pre .copy-btn:hover {
   user-select: none;
   z-index: 1000;
 }
+
+.top-right-name {
+  position: fixed;       /* Keeps it fixed on the screen */
+  top: 15px;             /* Distance from the top */
+  right: 20px;           /* Distance from the right */
+  color: #fff;           /* White text color */
+  font-weight: bold;
+  font-size: 1.2rem;
+  z-index: 1000;         /* Make sure it’s above other elements */
+  user-select: none;     /* Prevent text selection (optional) */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
