@@ -153,7 +153,7 @@ body {
 
 #chat-output {
   flex-grow: 1;
-  padding: 15px;
+  padding: 10px;
   overflow-y: auto;
   background-color: #1e1e2f;
   border-top: 1px solid #333;
@@ -284,10 +284,10 @@ pre .copy-btn:hover {
 
 .app-footer {
   text-align: center;
-  padding: 15px 10px;
+  padding: 5px 5px;
   font-size: 0.9rem;
   color: #bbb;
-  background-color: #1f1f1f;
+  background-color:rgb(42, 28, 28);
   border-top: 1px solid #333;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   user-select: none;
