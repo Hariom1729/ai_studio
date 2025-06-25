@@ -126,7 +126,7 @@ body {
   margin-left: 220px;
   flex-grow: 1;
   padding: 0px;
-  padding-bottom: 50px;
+  padding-bottom: 60px;
   background: linear-gradient(135deg, #181818, #20232a, #1f1f1f);
   display: flex;
   flex-direction: column;
