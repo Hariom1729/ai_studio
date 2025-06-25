@@ -3,12 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>HaiiGpt</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="sidebar">
+
+  <!-- Header -->
+  <div class="header">
+    <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="welcome">Welcome to HaiiGpt</div>
+    <div class="top-right-name">Hariom Yadav</div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
     <h2>HaiiGpt</h2>
     <ul>
       <li>Chat</li>
@@ -18,16 +26,11 @@
       <li>History</li>
       <li>Enable Saving</li>
     </ul>
-    <div class="sidebar-footer">
-    &copy; 2025 AI Studio. All rights reserved.
+   
   </div>
-  </div>
-  <div class="top-right-name">Hariom Yadav </div>
 
+  <!-- Main Content -->
   <div class="main">
-    <div class="welcome">Welcome to HaiiGpt</div>
-
-    <!-- Chat container with output and input grouped -->
     <div id="chat-container">
       <div id="chat-output"></div>
       <div id="input-area" class="prompt-box">
@@ -35,28 +38,13 @@
         <button onclick="sendMessage()">Run</button>
       </div>
     </div>
-
-    <!-- <h3>What's new</h3>
-    <div class="features">
-      <div class="card">
-        <strong>Native speech generation</strong><br />
-        Generate high quality text to speech with Gemini
-      </div>
-      <div class="card">
-        <strong>Live audio-to-audio dialog</strong><br />
-        Try Gemini’s natural, real-time dialog with audio and video inputs
-      </div>
-      <div class="card">
-        <strong>Native image generation</strong><br />
-        Interleaved text-and-image generation with Gemini 2.0 Flash
-      </div>
-      <div class="card">
-        <strong>Explore and co-develop apps</strong><br />
-        See Gemini in action with interactive, open source examples
-      </div>
-    </div> -->
   </div>
 
+  <footer class="app-footer">
+  &copy; 2025 HaiiGpt. All rights reserved.
+</footer>
+
+  <!-- External JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>

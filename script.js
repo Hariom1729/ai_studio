@@ -59,8 +59,14 @@ async function sendMessage() {
   appendMessage("You", message);
   input.value = '';
 
+  const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+
+  const apiURL = isLocalhost
+    ? 'http://localhost:3000/chat'
+    : 'https://ai-studio-3neo.onrender.com/chat';
+
   try {
-      const response = await fetch('https://ai-studio-3neo.onrender.com/chat', {
+      const response = await fetch(apiURL, {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json'
@@ -81,3 +87,17 @@ async function sendMessage() {
     console.error("Error in sendMessage:", error);
   }
 }
+
+function toggleSidebar() {
+  const sidebar = document.getElementById('sidebar');
+  sidebar.classList.toggle('open');
+}
+
+
+// ✅ Handle Enter key for message sending
+document.getElementById('user-input').addEventListener('keydown', function (event) {
+  if (event.key === 'Enter' && !event.shiftKey) {
+    event.preventDefault(); // Prevent line break
+    sendMessage();
+  }
+});

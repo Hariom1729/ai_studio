@@ -6,11 +6,18 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
+
+
 const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(cors({
-  origin: 'https://haiigpt.netlify.app', // ✅ Only allow Netlify frontend
+  origin: [
+    'http://localhost:5500',        // VS Code Live Server
+    'http://127.0.0.1:5500',        // Alternative Live Server
+    'http://localhost:3000',        // Optional, in case frontend is also served from backend
+    'https://haiigpt.netlify.app'   // Keep this for production
+  ], // ✅ Only allow Netlify frontend
   methods: ['POST'], // ✅ Only allow POST
   credentials: true
 }));
