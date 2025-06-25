@@ -63,7 +63,7 @@ async function sendMessage() {
 
   const apiURL = isLocalhost
     ? 'http://localhost:3000/chat'
-    : 'https://ai-studio-3neo.onrender.com';
+    : 'https://ai-studio-3neo.onrender.com/chat';
 
   try {
       const response = await fetch(apiURL, {
